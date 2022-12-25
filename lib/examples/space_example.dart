@@ -11,6 +11,7 @@ class SpaceExample extends StatelessWidget {
       children: <Widget>[
         CodeBox(
           title: '基本用法',
+          description: '相邻组件水平间距。',
           child: Space(
             children: [
               const Text('Space'),
@@ -22,6 +23,7 @@ class SpaceExample extends StatelessWidget {
         ),
         CodeBox(
           title: '垂直间距',
+          description: '相邻组件垂直间距。',
           child: Space(
             direction: Axis.vertical,
             children: [
@@ -34,8 +36,8 @@ class SpaceExample extends StatelessWidget {
         ),
         CodeBox(
           title: '对齐',
+          description: '设置对齐模式。',
           child: Space(
-            spacing: 16,
             children: [
               buildBox(
                 Space(
@@ -72,6 +74,7 @@ class SpaceExample extends StatelessWidget {
         ),
         CodeBox(
           title: '自定义尺寸',
+          description: '自定义间距大小。',
           child: Space(
             spacing: 32,
             children: [
@@ -84,6 +87,7 @@ class SpaceExample extends StatelessWidget {
         ),
         CodeBox(
           title: '自动换行',
+          description: '自动换行。',
           child: Space(
             spacing: 8,
             runSpacing: 16,
@@ -94,6 +98,7 @@ class SpaceExample extends StatelessWidget {
         // TODO: 待支持
         // CodeBox(
         //   title: '分隔符',
+        //   description: '相邻组件分隔符。',
         //   child: Space(
         //     spacing: 8,
         //     runSpacing: 16,

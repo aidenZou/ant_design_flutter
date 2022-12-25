@@ -4,17 +4,19 @@ class CodeBox extends StatelessWidget {
   const CodeBox({
     Key? key,
     required this.title,
+    required this.description,
     required this.child,
   }) : super(key: key);
 
   final String title;
+
+  final String description;
 
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(6)),
         border: Border.all(
@@ -30,13 +32,37 @@ class CodeBox extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.only(bottom: 4),
+            // padding: const EdgeInsets.fromLTRB(24, 42, 24, 50),
+            padding: const EdgeInsets.all(24),
+            child: child,
+          ),
+          Stack(
+            children: [
+              const Divider(
+                color: Color.fromRGBO(5, 5, 5, 0.06),
+                thickness: 1,
+              ),
+              Positioned(
+                left: 16,
+                child: Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.only(left: 8, right: 8),
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 14, fontWeight: FontWeight.bold, color: Color.fromRGBO(0, 0, 0, 0.88)),
+                  ),
+                ),
+              )
+            ],
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(24, 18, 24, 12),
             child: Text(
-              title,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              description,
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Color.fromRGBO(0, 0, 0, 0.88)),
             ),
           ),
-          Container(child: child)
         ],
       ),
     );

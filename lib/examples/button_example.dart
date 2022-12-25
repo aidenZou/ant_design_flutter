@@ -13,6 +13,7 @@ class ButtonExample extends StatelessWidget {
       children: <Widget>[
         CodeBox(
           title: '按钮类型',
+          description: '按钮有五种类型：主按钮、次按钮、(虚线按钮)、文本按钮和链接按钮。主按钮在同一个操作区域最多出现一次。',
           child: Space(
             children: [
               Button(
@@ -44,6 +45,7 @@ class ButtonExample extends StatelessWidget {
         ),
         CodeBox(
           title: '危险按钮',
+          description: '危险成为一种按钮属性而不是按钮类型。',
           child: Space(
             children: [
               Button(
@@ -80,6 +82,7 @@ class ButtonExample extends StatelessWidget {
         ),
         CodeBox(
           title: '不可用状态',
+          description: '添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。',
           child: Space(
             direction: Axis.vertical,
             children: [
@@ -212,6 +215,7 @@ class ButtonExample extends StatelessWidget {
         ),
         CodeBox(
           title: 'Block 按钮',
+          description: 'block 属性将使按钮适合其父宽度。',
           child: Space(
             direction: Axis.vertical,
             children: [
