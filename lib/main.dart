@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'examples/button_example.dart';
+import 'examples/space_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(16),
           children: const [
             ButtonExample(),
+            SpaceExample(),
           ],
         ),
       ),
