@@ -41,6 +41,7 @@ class CodeBox extends StatelessWidget {
               const Divider(
                 color: Color.fromRGBO(5, 5, 5, 0.06),
                 thickness: 1,
+                height: 14 * 1,
               ),
               Positioned(
                 left: 16,
@@ -50,7 +51,7 @@ class CodeBox extends StatelessWidget {
                   child: Text(
                     title,
                     style: const TextStyle(
-                        fontSize: 14, fontWeight: FontWeight.bold, color: Color.fromRGBO(0, 0, 0, 0.88)),
+                        fontSize: 14, height: 1, fontWeight: FontWeight.bold, color: Color.fromRGBO(0, 0, 0, 0.88)),
                   ),
                 ),
               )
