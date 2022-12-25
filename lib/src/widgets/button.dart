@@ -89,9 +89,7 @@ class _ButtonState extends State<Button> {
   bool hover = false;
 
   Color get backgroundColor {
-    if (widget.type != ButtonType.text &&
-        widget.type != ButtonType.link &&
-        widget.disabled) {
+    if (widget.type != ButtonType.text && widget.type != ButtonType.link && widget.disabled) {
       return const Color.fromRGBO(0, 0, 0, 0.04);
     }
 
@@ -184,9 +182,7 @@ class _ButtonState extends State<Button> {
           hover = false;
         });
       },
-      cursor: widget.disabled
-          ? SystemMouseCursors.forbidden
-          : SystemMouseCursors.click,
+      cursor: widget.disabled ? SystemMouseCursors.forbidden : SystemMouseCursors.click,
       child: GestureDetector(
         onTap: widget.disabled ? null : widget.onPressed,
         child: widget.block
@@ -206,8 +202,7 @@ class _ButtonState extends State<Button> {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: const BorderRadius.all(Radius.circular(6)),
-        border: widget.type == ButtonType.normal ||
-                widget.type == ButtonType.primary
+        border: widget.type == ButtonType.normal || widget.type == ButtonType.primary
             ? Border.all(
                 color: borderColor,
                 width: 1,
