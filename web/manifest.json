@@ -1,11 +1,11 @@
 {
-    "name": "ant_design_flutter",
-    "short_name": "ant_design_flutter",
+    "name": "Ant Design Flutter",
+    "short_name": "Ant Design Flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Ant Design of Flutter.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
