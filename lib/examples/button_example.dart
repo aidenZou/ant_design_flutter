@@ -1,10 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:flutter/material.dart';
-
-import 'code_box.dart';
-
-import '../src/widgets/main.dart';
+import 'base.dart';
 
 class ButtonExample extends StatelessWidget {
   const ButtonExample({Key? key}) : super(key: key);

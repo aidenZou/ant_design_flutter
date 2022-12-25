@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'code_box.dart';
-
-import '../src/widgets/main.dart';
+import 'base.dart';
 
 class SpaceExample extends StatelessWidget {
   const SpaceExample({Key? key}) : super(key: key);
