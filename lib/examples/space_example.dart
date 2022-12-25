@@ -41,7 +41,7 @@ class SpaceExample extends StatelessWidget {
             children: [
               buildBox(
                 Space(
-                  align: WrapCrossAlignment.start,
+                  crossAlignment: WrapCrossAlignment.start,
                   children: [
                     const Text('start'),
                     Button('Button', type: ButtonType.primary, onPressed: () => {}),
@@ -51,7 +51,7 @@ class SpaceExample extends StatelessWidget {
               ),
               buildBox(
                 Space(
-                  align: WrapCrossAlignment.center,
+                  crossAlignment: WrapCrossAlignment.center,
                   children: [
                     const Text('center'),
                     Button('Button', type: ButtonType.primary, onPressed: () => {}),
@@ -61,7 +61,7 @@ class SpaceExample extends StatelessWidget {
               ),
               buildBox(
                 Space(
-                  align: WrapCrossAlignment.end,
+                  crossAlignment: WrapCrossAlignment.end,
                   children: [
                     const Text('end'),
                     Button('Button', type: ButtonType.primary, onPressed: () => {}),

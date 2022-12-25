@@ -6,7 +6,8 @@ class Space extends StatelessWidget {
     this.direction = Axis.horizontal,
     this.spacing = 8,
     this.runSpacing,
-    this.align = WrapCrossAlignment.center,
+    this.mainAlignment = WrapAlignment.start,
+    this.crossAlignment = WrapCrossAlignment.center,
     required this.children,
   }) : super(key: key);
 
@@ -24,7 +25,10 @@ class Space extends StatelessWidget {
   final double? runSpacing;
 
   /// 对齐方式
-  final WrapCrossAlignment align;
+  final WrapAlignment mainAlignment;
+
+  /// 对齐方式
+  final WrapCrossAlignment crossAlignment;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,8 @@ class Space extends StatelessWidget {
       direction: direction,
       spacing: spacing,
       runSpacing: runSpacing ?? spacing,
-      crossAxisAlignment: align,
+      alignment: mainAlignment,
+      crossAxisAlignment: crossAlignment,
       children: children,
     );
   }
