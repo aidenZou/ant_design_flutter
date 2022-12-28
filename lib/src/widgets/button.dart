@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dotted_border/dotted_border.dart';
+import 'package:dotted_decoration/dotted_decoration.dart';
 
 /// 主按钮、次按钮、虚线按钮、文本按钮和链接按钮
 enum ButtonType {
@@ -199,22 +199,30 @@ class _ButtonState extends State<Button> {
   }
 
   Widget buildButton() {
-    var button = Container(
+    return Container(
       // width: 74,
       height: isDashed ? 30 : 32,
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: const BorderRadius.all(Radius.circular(6)),
-        border: [ButtonType.normal, ButtonType.primary].contains(widget.type)
-            ? Border.all(
-                color: borderColor,
-                width: 1,
-                style: BorderStyle.solid,
-                strokeAlign: StrokeAlign.inside,
-              )
-            : null,
-      ),
+      decoration: widget.type == ButtonType.dashed
+          ? DottedDecoration(
+              shape: Shape.box,
+              strokeWidth: 1,
+              dash: const <int>[3, 2],
+              color: borderColor,
+              borderRadius: const BorderRadius.all(Radius.circular(6)),
+            )
+          : BoxDecoration(
+              color: backgroundColor,
+              borderRadius: const BorderRadius.all(Radius.circular(6)),
+              border: [ButtonType.normal, ButtonType.primary].contains(widget.type)
+                  ? Border.all(
+                      color: borderColor,
+                      width: 1,
+                      style: BorderStyle.solid,
+                      strokeAlign: StrokeAlign.inside,
+                    )
+                  : null,
+            ),
       child: Center(
         child: Text(
           widget.text,
@@ -226,18 +234,5 @@ class _ButtonState extends State<Button> {
         ),
       ),
     );
-
-    if (widget.type == ButtonType.dashed) {
-      return DottedBorder(
-        borderType: BorderType.RRect,
-        radius: const Radius.circular(6),
-        color: borderColor,
-        strokeWidth: 1,
-        padding: const EdgeInsets.all(0),
-        child: button,
-      );
-    }
-
-    return button;
   }
 }
