@@ -1,3 +1,4 @@
 export './button.dart';
-export './space.dart';
+export './divider.dart';
 export './modal.dart';
+export './space.dart';

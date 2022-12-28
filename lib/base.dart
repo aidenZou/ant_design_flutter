@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'examples/button_example.dart';
+import 'examples/divider_example.dart';
 import 'examples/modal_example.dart';
 import 'examples/space_example.dart';
 
 List<ExampleModel> widgetExample = [
   ExampleModel(name: 'Button', builder: (BuildContext context) => const BaseView(child: ButtonExample())),
+  ExampleModel(name: 'Divider', builder: (BuildContext context) => const BaseView(child: DividerExample())),
   ExampleModel(name: 'Space', builder: (BuildContext context) => const BaseView(child: SpaceExample())),
   ExampleModel(name: 'Modal', builder: (BuildContext context) => const BaseView(child: ModalExample())),
 ];

@@ -1,4 +1,4 @@
-export 'package:flutter/material.dart';
+export 'package:flutter/material.dart' hide Divider;
 
 export 'code_box.dart';
 
