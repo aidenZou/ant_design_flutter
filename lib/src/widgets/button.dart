@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 /// 主按钮、次按钮、虚线按钮、文本按钮和链接按钮
 enum ButtonType {
@@ -82,11 +83,14 @@ class Button extends StatefulWidget {
   final VoidCallback? onPressed;
 
   @override
+  // ignore: library_private_types_in_public_api
   _ButtonState createState() => _ButtonState();
 }
 
 class _ButtonState extends State<Button> {
   bool hover = false;
+
+  bool get isDashed => widget.type == ButtonType.dashed;
 
   Color get backgroundColor {
     if (widget.type != ButtonType.text && widget.type != ButtonType.link && widget.disabled) {
@@ -133,7 +137,7 @@ class _ButtonState extends State<Button> {
       return const Color(0xff1677FF);
     }
 
-    if (widget.type == ButtonType.normal && hover) {
+    if (([ButtonType.normal, ButtonType.dashed].contains(widget.type)) && hover) {
       return const Color(0xff4096ff);
     }
 
@@ -145,7 +149,7 @@ class _ButtonState extends State<Button> {
       return const Color.fromRGBO(0, 0, 0, 0.15);
     }
 
-    if (widget.type == ButtonType.normal) {
+    if ([ButtonType.normal, ButtonType.dashed].contains(widget.type)) {
       if (widget.danger) {
         return const Color(0xffFF4D4F);
       }
@@ -194,15 +198,15 @@ class _ButtonState extends State<Button> {
     );
   }
 
-  Container buildButton() {
-    return Container(
+  Widget buildButton() {
+    var button = Container(
       // width: 74,
-      height: 32,
+      height: isDashed ? 30 : 32,
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: const BorderRadius.all(Radius.circular(6)),
-        border: widget.type == ButtonType.normal || widget.type == ButtonType.primary
+        border: [ButtonType.normal, ButtonType.primary].contains(widget.type)
             ? Border.all(
                 color: borderColor,
                 width: 1,
@@ -222,5 +226,18 @@ class _ButtonState extends State<Button> {
         ),
       ),
     );
+
+    if (widget.type == ButtonType.dashed) {
+      return DottedBorder(
+        borderType: BorderType.RRect,
+        radius: const Radius.circular(6),
+        color: borderColor,
+        strokeWidth: 1,
+        padding: const EdgeInsets.all(0),
+        child: button,
+      );
+    }
+
+    return button;
   }
 }

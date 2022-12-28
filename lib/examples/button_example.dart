@@ -25,10 +25,11 @@ class ButtonExample extends StatelessWidget {
                 'Default Button',
                 onPressed: () => print('onPressed'),
               ),
-              // Button(
-              //   'Dashed Button',
-              //   type: ButtonType.dashed,
-              //   onPressed: () => print('onPressed'),
+              Button(
+                'Dashed Button',
+                type: ButtonType.dashed,
+                onPressed: () => print('onPressed'),
+              ),
               // ),
               Button(
                 'Text Button',
@@ -59,12 +60,12 @@ class ButtonExample extends StatelessWidget {
                 danger: true,
                 onPressed: () => print('onPressed'),
               ),
-              // Button(
-              //   'Dashed',
-              //   type: ButtonType.dashed,
-              //   danger: true,
-              //   onPressed: () => print('onPressed'),
-              // ),
+              Button(
+                'Dashed',
+                type: ButtonType.dashed,
+                danger: true,
+                onPressed: () => print('onPressed'),
+              ),
               Button(
                 'Text',
                 type: ButtonType.text,
@@ -109,6 +110,21 @@ class ButtonExample extends StatelessWidget {
                   ),
                   Button(
                     'Default(disabled)',
+                    disabled: true,
+                    onPressed: () => print('onPressed'),
+                  ),
+                ],
+              ),
+              Space(
+                children: [
+                  Button(
+                    'Dashed',
+                    type: ButtonType.dashed,
+                    onPressed: () => print('onPressed'),
+                  ),
+                  Button(
+                    'Dashed(disabled)',
+                    type: ButtonType.dashed,
                     disabled: true,
                     onPressed: () => print('onPressed'),
                   ),
@@ -179,6 +195,23 @@ class ButtonExample extends StatelessWidget {
               Space(
                 children: [
                   Button(
+                    'Danger Dashed',
+                    type: ButtonType.dashed,
+                    danger: true,
+                    onPressed: () => print('onPressed'),
+                  ),
+                  Button(
+                    'Danger Dashed(disabled)',
+                    type: ButtonType.dashed,
+                    danger: true,
+                    disabled: true,
+                    onPressed: () => print('onPressed'),
+                  ),
+                ],
+              ),
+              Space(
+                children: [
+                  Button(
                     'Danger Text',
                     type: ButtonType.text,
                     danger: true,
@@ -227,6 +260,12 @@ class ButtonExample extends StatelessWidget {
               ),
               Button(
                 'Default',
+                block: true,
+                onPressed: () => print('onPressed'),
+              ),
+              Button(
+                'Dashed',
+                type: ButtonType.dashed,
                 block: true,
                 onPressed: () => print('onPressed'),
               ),
