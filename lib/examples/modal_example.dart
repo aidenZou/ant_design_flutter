@@ -26,8 +26,8 @@ class ModalExample extends StatelessWidget {
                     builder: (context) {
                       return Modal(
                         title: 'Basic Modal',
-                        child: Column(
-                          children: const [
+                        child: const Column(
+                          children: [
                             // style: TextStyle(
                             //   fontSize: 14,
                             //   height: 1.5,
@@ -65,8 +65,8 @@ class ModalExample extends StatelessWidget {
                     builder: (context) {
                       return Modal(
                         title: 'Basic Modal',
-                        child: Column(
-                          children: const [
+                        child: const Column(
+                          children: [
                             Text('Some contents...'),
                             Text('Some contents...'),
                             Text('Some contents...'),
@@ -96,8 +96,8 @@ class ModalExample extends StatelessWidget {
                     builder: (context) {
                       return Modal(
                         title: 'Title',
-                        child: Column(
-                          children: const [
+                        child: const Column(
+                          children: [
                             Text('Some contents...'),
                             Text('Some contents...'),
                             Text('Some contents...'),
