@@ -91,7 +91,7 @@ class DividerExample extends StatelessWidget {
           color: const Color(0xff40a9ff),
           width: 1,
           style: BorderStyle.solid,
-          strokeAlign: StrokeAlign.inside,
+          strokeAlign: BorderSide.strokeAlignInside,
         ),
       ),
       child: child,

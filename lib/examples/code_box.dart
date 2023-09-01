@@ -23,7 +23,7 @@ class CodeBox extends StatelessWidget {
           color: const Color.fromRGBO(5, 5, 5, 0.06),
           width: 1,
           style: BorderStyle.solid,
-          strokeAlign: StrokeAlign.inside,
+          strokeAlign: BorderSide.strokeAlignInside,
         ),
       ),
       child: Column(

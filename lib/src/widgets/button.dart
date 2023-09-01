@@ -219,7 +219,7 @@ class _ButtonState extends State<Button> {
                       color: borderColor,
                       width: 1,
                       style: BorderStyle.solid,
-                      strokeAlign: StrokeAlign.inside,
+                      strokeAlign: BorderSide.strokeAlignInside,
                     )
                   : null,
             ),
