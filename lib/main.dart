@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         // useMaterial3: true,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: 'MiSans',
       ),
       home: const MyHomePage(title: 'Ant Design Flutter'), // Ant Design UI Kit
     );
